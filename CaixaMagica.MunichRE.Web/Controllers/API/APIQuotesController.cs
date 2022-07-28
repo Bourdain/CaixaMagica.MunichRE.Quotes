@@ -28,7 +28,10 @@ namespace CaixaMagica.MunichRE.Web.Controllers.API
             {
                 return NotFound();
             }
-            int vall = new Random().Next(1, _context.Quotes.Count());
+
+            int today = int.Parse(DateTime.Today.ToString("2022728"));
+
+            int vall = new Random(today).Next(1, _context.Quotes.Count());
             var randomQuote = _context.Quotes.Skip(vall).Take(1).First();
 
             return randomQuote;

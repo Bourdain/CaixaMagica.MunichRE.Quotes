@@ -59,6 +59,17 @@ namespace CaixaMagica.MunichRE.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (quotes.Author == "" || quotes.Author is null)
+                {
+                    quotes.Author = "Unknown";
+                }
+
+                if (quotes.Quote == "" || quotes.Quote is null)
+                {
+                    quotes.Quote = "Empty";
+                }
+
+
                 _context.Add(quotes);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -98,6 +109,17 @@ namespace CaixaMagica.MunichRE.Web.Controllers
             {
                 try
                 {
+
+                    if (quotes.Author == "" || quotes.Author is null)
+                    {
+                        quotes.Author = "Unknown";
+                    }
+
+                    if (quotes.Quote == "" || quotes.Quote is null)
+                    {
+                        quotes.Quote = "Empty";
+                    }
+
                     _context.Update(quotes);
                     await _context.SaveChangesAsync();
                 }
