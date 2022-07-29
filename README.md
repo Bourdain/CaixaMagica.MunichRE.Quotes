@@ -1,5 +1,7 @@
 # CaixaMagica.MunichRE.Quotes
 
+You will need to set the Web project as the Startup Project because I have set standard Visual Studio files in the GitIgnore file, this means that the startup project preference is also ignored.
+
 
 • Write a REST API to create, read, update and delete people and quotes. Include an endpoint to return a random quote of the day and who said it.
 
@@ -27,3 +29,4 @@ Acceptance criteria:
     You can create, delete, edit, and view the quotes.
     
     Creating or editing an empty quote will add Empty - Unknown
+
